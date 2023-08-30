@@ -8,6 +8,17 @@ const loadPhone = async (search) => {
 const displayPhone = (phones) => {
     const phoneContainer = document.getElementById('phone-container');
     phoneContainer.textContent = '';
+
+    const showButton = document.getElementById('show-all-container')
+    if (phones.length > 10) {
+        showButton.classList.remove('hidden');
+    }
+    else {
+        showButton.classList.add('hidden');
+    }
+
+    phones = phones.slice(0, 10);
+
     phones.forEach(phone => {
         const phoneCard = document.createElement('div');
         phoneCard.classList = `card bg-base-100 shadow-xl py-10 mx-auto`
@@ -31,6 +42,5 @@ const handleSearch = () => {
     console.log(searchValue);
     loadPhone(searchValue);
 }
-
 
 // loadPhone();

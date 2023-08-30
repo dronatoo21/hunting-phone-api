@@ -17,8 +17,14 @@
             <button onclick=" handleSearch()" class="btn btn-error">Search</button>
         </section> 
         <section>
-            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:px-5 lg:px-4 px-5">
+            <div id="toggle-spinner" class="mx-auto text-center py-40 hidden">
+                <span class="loading loading-spinner loading-lg"></span>
+            </div>
+            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:px-5 lg:px-4 px-5 container mx-auto">
                 
+            </div>
+            <div id="show-all-container" class="my-3 container mx-auto md:px-5 lg:px-4 px-5 hidden">
+                <button class="btn btn-success">Success</button>
             </div>
         </section>
     </main>
