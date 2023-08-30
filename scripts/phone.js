@@ -33,14 +33,28 @@ const displayPhone = (phones) => {
             </div>
         `
         phoneContainer.appendChild(phoneCard);
+
+        toggleLoading(false);
     })
 }
 
 const handleSearch = () => {
+    toggleLoading(true);
     const textInput = document.getElementById('search-input');
     const searchValue = textInput.value
     console.log(searchValue);
     loadPhone(searchValue);
+}
+
+
+const toggleLoading = (isLoading) => {
+    const spinner = document.getElementById('toggle-spinner');
+    if (isLoading) {
+        spinner.classList.remove('hidden');
+    }
+    else {
+        spinner.classList.add('hidden');
+    }
 }
 
 // loadPhone();
